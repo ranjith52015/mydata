@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - main
-    - ranjith-patch
   workflow_dispatch:
 jobs:
   build:
@@ -17,6 +16,6 @@ jobs:
        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_SECRET}}
     - name: Build and push
     - uses: docker/build-push-action@v2
-      with: |
-          push: true
-          tags: ranjithreddy321 /test
+      with: 
+        push: true
+        tags: ranjithreddy321 /test
