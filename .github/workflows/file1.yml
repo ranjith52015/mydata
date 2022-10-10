@@ -1,12 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
-env: 
-  REGISTRY: ghcr.io
+    branches: [ "ranjith-patch" ]
 jobs:
   build:
     runs-on: ubuntu-latest
