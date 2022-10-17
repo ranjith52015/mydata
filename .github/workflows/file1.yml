@@ -54,3 +54,4 @@ jobs:
         tags: ranjithreddy321/test
     - name: true or false 
       run: exit 1
+       if: ${{ success() }}
