@@ -22,5 +22,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        push: true
+        push: false
         tags: ranjithreddy321/test
+    - name: true or false 
+      run: exit 1
+      if: github.pullrequest.branches == 'true'
