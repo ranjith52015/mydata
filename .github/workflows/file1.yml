@@ -22,5 +22,5 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        push: ${{ github.event_name == 'pull' && github.ref_name == 'dev1' }}
+        push: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
         tags: ranjithreddy321/test
